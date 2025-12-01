@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: majesty
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/majesty}
+    username: ${SPRING_DATASOURCE_USERNAME:admin}
+    password: ${SPRING_DATASOURCE_PASSWORD:C0nnect123}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+  devtools:
+    restart:
+      enabled: true
+
+security:
+  jwt:
+    # Use a secret with at least 32 characters to satisfy HS256 key length
+    secret: "nahXkTgSwp4QzcZK13495vff5mYaZBFppzhfeBXfr6j"
+    # 1 day in milliseconds
+    expirationMillis: 86400000
+
+#Spring Security Logs
+logging:
+  level:
+    org.springframework.security: DEBUG

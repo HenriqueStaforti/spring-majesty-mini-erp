@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        /* Tabela do header */
+        .header-table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        .header-table td {
+            padding: 4px 0;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        .header-label {
+            font-weight: bold;
+            color: #333;
+            width: 20%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: none;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #eee;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <img src="https://www.majestade.com.br/admin/uploads/f1/logo_top.png" alt="Logo Majestade" width="auto" height="200" />
+</div>
+
+<h1>Pedido #{{orderNumber}}</h1>
+
+<table class="header-table">
+    <tr>
+        <td class="header-label">Cliente:</td>
+        <td>{{clientName}}</td>
+        <td class="header-label">Endereço:</td>
+        <td>{{address}}</td>
+    </tr>
+    <tr>
+        <td class="header-label">Bairro:</td>
+        <td>{{district}}</td>
+        <td class="header-label">Município:</td>
+        <td>{{city}}</td>
+    </tr>
+    <tr>
+        <td class="header-label">Data do pedido:</td>
+        <td>{{submittedDate}}</td>
+        <td class="header-label">Prazo:</td>
+        <td>{{paymentTerm}}</td>
+    </tr>
+</table>
+
+<table>
+    <thead>
+    <tr>
+        <th>Produto</th>
+        <th>Cod</th>
+        <th>Qtd</th>
+        <th>Preço</th>
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{items}}
+    </tbody>
+</table>
+
+<h3>Total do Pedido: R$ {{total}}</h3>
+
+</body>
+</html>
