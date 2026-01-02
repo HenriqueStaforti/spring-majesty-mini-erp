@@ -1,7 +1,7 @@
-package com.henrique.majesty.controller;
+package com.henrique.majesty.controller.product;
 
-import com.henrique.majesty.dto.ProductDto;
-import com.henrique.majesty.service.ProductService;
+import com.henrique.majesty.dto.product.ProductDto;
+import com.henrique.majesty.service.product.ProductService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,6 +1,6 @@
-package com.henrique.majesty.dto;
+package com.henrique.majesty.dto.order;
 
-import com.henrique.majesty.enums.OrderPaymentTypeEnum;
+import com.henrique.majesty.enums.order.OrderPaymentTypeEnum;
 
 import java.time.Instant;
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.henrique.majesty.dto;
+package com.henrique.majesty.dto.product;
 
-import com.henrique.majesty.entity.ProductEntity;
-import com.henrique.majesty.enums.ProductUnitOfMeasureEnum;
+import com.henrique.majesty.entity.product.ProductEntity;
+import com.henrique.majesty.enums.product.ProductUnitOfMeasureEnum;
 
 public record ProductDto(
         String name,

@@ -1,7 +1,6 @@
-package com.henrique.majesty.repository;
+package com.henrique.majesty.repository.user;
 
-import com.henrique.majesty.entity.ProductEntity;
-import com.henrique.majesty.entity.UserEntity;
+import com.henrique.majesty.entity.auth.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

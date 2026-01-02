@@ -1,6 +1,7 @@
-package com.henrique.majesty.entity;
+package com.henrique.majesty.entity.order;
 
-import com.henrique.majesty.enums.ProductUnitOfMeasureEnum;
+import com.henrique.majesty.entity.product.ProductEntity;
+import com.henrique.majesty.enums.product.ProductUnitOfMeasureEnum;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,7 +1,7 @@
-package com.henrique.majesty.security;
+package com.henrique.majesty.infrastructure.security.service;
 
-import com.henrique.majesty.entity.UserEntity;
-import com.henrique.majesty.repository.UserRepository;
+import com.henrique.majesty.entity.auth.UserEntity;
+import com.henrique.majesty.repository.user.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

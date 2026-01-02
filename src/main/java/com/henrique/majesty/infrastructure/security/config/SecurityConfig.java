@@ -1,5 +1,6 @@
-package com.henrique.majesty.security;
+package com.henrique.majesty.infrastructure.security.config;
 
+import com.henrique.majesty.infrastructure.security.filter.JwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

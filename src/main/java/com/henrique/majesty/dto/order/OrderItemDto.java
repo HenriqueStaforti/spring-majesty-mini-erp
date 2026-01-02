@@ -1,6 +1,6 @@
-package com.henrique.majesty.dto;
+package com.henrique.majesty.dto.order;
 
-import com.henrique.majesty.enums.ProductUnitOfMeasureEnum;
+import com.henrique.majesty.enums.product.ProductUnitOfMeasureEnum;
 
 public record OrderItemDto(
         Long productId,

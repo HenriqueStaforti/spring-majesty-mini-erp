@@ -1,4 +1,4 @@
-package com.henrique.majesty.security;
+package com.henrique.majesty.infrastructure.security.jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

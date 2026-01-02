@@ -1,4 +1,4 @@
-package com.henrique.majesty.enums;
+package com.henrique.majesty.enums.order;
 
 public enum OrderPaymentTypeEnum {
     CREDIT_CARD,

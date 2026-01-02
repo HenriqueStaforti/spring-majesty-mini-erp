@@ -1,8 +1,8 @@
-package com.henrique.majesty.service;
+package com.henrique.majesty.service.product;
 
-import com.henrique.majesty.dto.ProductDto;
-import com.henrique.majesty.entity.ProductEntity;
-import com.henrique.majesty.repository.ProductRepository;
+import com.henrique.majesty.dto.product.ProductDto;
+import com.henrique.majesty.entity.product.ProductEntity;
+import com.henrique.majesty.repository.product.ProductRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

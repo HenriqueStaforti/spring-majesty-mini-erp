@@ -1,4 +1,4 @@
-package com.henrique.majesty.dto;
+package com.henrique.majesty.dto.auth;
 
 import jakarta.validation.constraints.NotBlank;
 

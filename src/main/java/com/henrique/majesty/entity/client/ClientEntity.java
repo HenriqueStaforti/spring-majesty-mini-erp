@@ -1,4 +1,4 @@
-package com.henrique.majesty.entity;
+package com.henrique.majesty.entity.client;
 
 import jakarta.persistence.*;
 import lombok.*;

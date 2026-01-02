@@ -1,6 +1,7 @@
-package com.henrique.majesty.entity;
+package com.henrique.majesty.entity.order;
 
-import com.henrique.majesty.enums.OrderPaymentTypeEnum;
+import com.henrique.majesty.entity.client.ClientEntity;
+import com.henrique.majesty.enums.order.OrderPaymentTypeEnum;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,6 +1,6 @@
-package com.henrique.majesty.dto;
+package com.henrique.majesty.dto.client;
 
-import com.henrique.majesty.entity.ClientEntity;
+import com.henrique.majesty.entity.client.ClientEntity;
 import lombok.Builder;
 
 @Builder

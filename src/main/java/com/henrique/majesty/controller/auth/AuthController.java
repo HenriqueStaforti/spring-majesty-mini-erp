@@ -1,9 +1,9 @@
-package com.henrique.majesty.controller;
+package com.henrique.majesty.controller.auth;
 
-import com.henrique.majesty.dto.LoginDto;
-import com.henrique.majesty.dto.RegisterDto;
-import com.henrique.majesty.dto.TokenDto;
-import com.henrique.majesty.service.AuthService;
+import com.henrique.majesty.dto.auth.LoginDto;
+import com.henrique.majesty.dto.auth.RegisterDto;
+import com.henrique.majesty.dto.auth.TokenDto;
+import com.henrique.majesty.service.auth.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

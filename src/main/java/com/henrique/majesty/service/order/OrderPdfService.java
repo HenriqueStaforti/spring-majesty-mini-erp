@@ -1,7 +1,7 @@
-package com.henrique.majesty.service;
+package com.henrique.majesty.service.order;
 
-import com.henrique.majesty.entity.OrderEntity;
-import com.henrique.majesty.entity.OrderItemEntity;
+import com.henrique.majesty.entity.order.OrderEntity;
+import com.henrique.majesty.entity.order.OrderItemEntity;
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
 import org.springframework.stereotype.Service;
 

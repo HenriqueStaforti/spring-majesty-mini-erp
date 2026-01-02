@@ -1,7 +1,7 @@
-package com.henrique.majesty.controller;
+package com.henrique.majesty.controller.client;
 
-import com.henrique.majesty.dto.ClientDto;
-import com.henrique.majesty.service.ClientService;
+import com.henrique.majesty.dto.client.ClientDto;
+import com.henrique.majesty.service.client.ClientService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

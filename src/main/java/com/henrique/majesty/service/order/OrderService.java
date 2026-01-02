@@ -1,10 +1,12 @@
-package com.henrique.majesty.service;
+package com.henrique.majesty.service.order;
 
-import com.henrique.majesty.dto.OrderDto;
-import com.henrique.majesty.entity.ClientEntity;
-import com.henrique.majesty.entity.OrderEntity;
-import com.henrique.majesty.entity.OrderItemEntity;
-import com.henrique.majesty.repository.OrderRepository;
+import com.henrique.majesty.dto.order.OrderDto;
+import com.henrique.majesty.entity.client.ClientEntity;
+import com.henrique.majesty.entity.order.OrderEntity;
+import com.henrique.majesty.entity.order.OrderItemEntity;
+import com.henrique.majesty.repository.order.OrderRepository;
+import com.henrique.majesty.service.product.ProductService;
+import com.henrique.majesty.service.client.ClientService;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

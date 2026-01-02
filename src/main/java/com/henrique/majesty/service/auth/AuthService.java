@@ -1,11 +1,11 @@
-package com.henrique.majesty.service;
+package com.henrique.majesty.service.auth;
 
-import com.henrique.majesty.dto.LoginDto;
-import com.henrique.majesty.dto.RegisterDto;
-import com.henrique.majesty.dto.TokenDto;
-import com.henrique.majesty.entity.UserEntity;
-import com.henrique.majesty.repository.UserRepository;
-import com.henrique.majesty.security.JwtService;
+import com.henrique.majesty.dto.auth.LoginDto;
+import com.henrique.majesty.dto.auth.RegisterDto;
+import com.henrique.majesty.dto.auth.TokenDto;
+import com.henrique.majesty.entity.auth.UserEntity;
+import com.henrique.majesty.repository.user.UserRepository;
+import com.henrique.majesty.infrastructure.security.jwt.JwtService;
 import jakarta.transaction.Transactional;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
