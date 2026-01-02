@@ -1,5 +1,6 @@
 package com.henrique.majesty.controller.client;
 
+import com.henrique.majesty.dto.client.ClientDetailsDto;
 import com.henrique.majesty.dto.client.ClientDto;
 import com.henrique.majesty.service.client.ClientService;
 import jakarta.validation.Valid;
@@ -20,20 +21,20 @@ public class ClientController {
     }
 
     @PostMapping
-    public ResponseEntity<ClientDto> createClient(@RequestBody @Valid ClientDto clientDto) {
-        ClientDto client = clientService.save(clientDto);
+    public ResponseEntity<ClientDetailsDto> createClient(@RequestBody @Valid ClientDto clientDto) {
+        ClientDetailsDto client = clientService.save(clientDto);
         return ResponseEntity.status(201).body(client);
     }
 
     @GetMapping
-    public ResponseEntity<Page<ClientDto>> list(@PageableDefault Pageable pageable) {
-        Page<ClientDto> clients = clientService.list(pageable);
+    public ResponseEntity<Page<ClientDetailsDto>> list(@PageableDefault Pageable pageable) {
+        Page<ClientDetailsDto> clients = clientService.list(pageable);
         return ResponseEntity.ok(clients);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ClientDto> findById(@PathVariable Long id) {
-        ClientDto client = clientService.get(id);
+    public ResponseEntity<ClientDetailsDto> findById(@PathVariable Long id) {
+        ClientDetailsDto client = clientService.get(id);
         return ResponseEntity.ok(client);
     }
 }

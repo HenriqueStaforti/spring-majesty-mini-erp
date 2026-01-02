@@ -1,5 +1,6 @@
 package com.henrique.majesty.service.client;
 
+import com.henrique.majesty.dto.client.ClientDetailsDto;
 import com.henrique.majesty.dto.client.ClientDto;
 import com.henrique.majesty.entity.client.ClientEntity;
 import com.henrique.majesty.repository.client.ClientRepository;
@@ -18,7 +19,7 @@ public class ClientService {
     }
 
     @Transactional
-    public ClientDto save(ClientDto clientDto) {
+    public ClientDetailsDto save(ClientDto clientDto) {
         ClientEntity clientEntity = ClientEntity.builder()
                 .name(clientDto.name())
                 .phone(clientDto.phone())
@@ -32,11 +33,12 @@ public class ClientService {
                 .build();
 
         clientRepository.save(clientEntity);
-        return clientDto;
+
+        return new ClientDetailsDto(clientEntity);
     }
 
     @Transactional
-    public ClientDto update(Long id, ClientDto clientDto) {
+    public ClientDetailsDto update(Long id, ClientDto clientDto) {
         ClientEntity clientEntity = clientRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Client not found"));
         clientEntity.setName(clientDto.name());
@@ -49,7 +51,8 @@ public class ClientService {
         clientEntity.setDocument(clientDto.document());
         clientEntity.setEnabled(clientDto.enabled());
         clientRepository.save(clientEntity);
-        return clientDto;
+
+        return new ClientDetailsDto(clientEntity);
     }
 
     @Transactional
@@ -62,14 +65,14 @@ public class ClientService {
                 .orElseThrow(() -> new RuntimeException("Client not found"));
     }
 
-    public Page<ClientDto> list(Pageable pageable) {
+    public Page<ClientDetailsDto> list(Pageable pageable) {
         Page<ClientEntity> clientEntities = clientRepository.findAll(pageable);
-        return clientEntities.map(ClientDto::new);
+        return clientEntities.map(ClientDetailsDto::new);
     }
 
-    public ClientDto get(Long id) {
+    public ClientDetailsDto get(Long id) {
         ClientEntity clientEntity = clientRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Client not found"));
-        return new ClientDto(clientEntity);
+        return new ClientDetailsDto(clientEntity);
     }
 }
