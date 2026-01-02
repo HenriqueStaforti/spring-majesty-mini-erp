@@ -31,10 +31,15 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
+                    // product route permissions
                     .requestMatchers(HttpMethod.POST, "/product/**").hasRole("ADMIN")
                     .requestMatchers(HttpMethod.PUT, "/product/**").hasRole("ADMIN")
                     .requestMatchers(HttpMethod.DELETE, "/product/**").hasRole("ADMIN")
                     .requestMatchers(HttpMethod.GET, "/product/**").permitAll()
+                    // client route permissions
+                    .requestMatchers(HttpMethod.POST, "/client/**").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.GET, "/client/**").permitAll()
+                    // auth route permission
                     .requestMatchers("/auth/**").permitAll()
                     .anyRequest().authenticated()
             )
