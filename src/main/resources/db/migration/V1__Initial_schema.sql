@@ -86,8 +86,7 @@ COMMENT ON TABLE orders IS 'Registra os pedidos de venda';
 COMMENT ON TABLE order_item IS 'Itens que compõem cada pedido de venda';
 
 -- Inserção de dados iniciais (opcional)
--- Senha: admin123 (hash BCrypt gerado com força 10)
-INSERT INTO users (username, password, created_at) 
+INSERT INTO users (username, password, created_at)
 VALUES ('admin', '$2y$10$3PPbGI4nxng5CZEvl/JNouPSECfQrUeIW9YHrMzdgawoP8DFqI67S', CURRENT_TIMESTAMP);
 
 INSERT INTO user_roles (user_id, role) 
